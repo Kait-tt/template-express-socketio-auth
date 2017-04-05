@@ -1,0 +1,14 @@
+{
+  "db": {
+    "username": "root",
+    "password": null,
+    "database": "template_express_socketio_auth",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "session": {
+    "name": "name",
+    "secret": "secret"
+  }
+}

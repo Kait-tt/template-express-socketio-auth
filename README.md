@@ -10,6 +10,7 @@ git clone https://github.com/Kait-tt/template-express-socketio-auth.git
 cd template-express-socketio-auth
 npm install
 npm run build
+mysql -uroot -p < 'create database template_express_socketio_auth;'
 ```
 
 ## Usage
