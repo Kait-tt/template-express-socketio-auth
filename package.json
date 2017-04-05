@@ -2,16 +2,48 @@
   "name": "template-express-socketio-auth",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kait-tt/template-express-socketio-auth.git"
+  },
+  "author": "snakazawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kait-tt/template-express-socketio-auth/issues"
+  },
+  "homepage": "https://github.com/Kait-tt/template-express-socketio-auth#readme",
+  "engines": {
+    "node": "~7.0.0"
   },
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-register": "^6.24.0",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
+    "cross-env": "^4.0.0",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
     "express": "~4.15.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "jquery": "^3.2.1",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3"
   }
 }

@@ -8,6 +8,7 @@
 const app = require('../app');
 const debug = require('debug')('template-express-socketio-auth:server');
 const http = require('http');
+const SocketRouter = require('../lib/socket/router');
 
 /**
  * Get port from environment and store in Express.
@@ -29,6 +30,8 @@ const server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+const socketRouter = new SocketRouter(server);
+app.set('socket', socketRouter);
 
 /**
  * Normalize a port into a number, string, or false.
