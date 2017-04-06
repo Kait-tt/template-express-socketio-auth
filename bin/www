@@ -7,8 +7,8 @@
 
 const app = require('../app');
 const debug = require('debug')('template-express-socketio-auth:server');
-const http = require('http');
 const SocketRouter = require('../lib/socket/router');
+const config = require('config');
 
 /**
  * Get port from environment and store in Express.
@@ -18,10 +18,22 @@ const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Create HTTP or HTTPS server.
  */
-
-const server = http.createServer(app);
+let server;
+if (config.get('ssl.enabled')) {
+    // HTTPS
+    const https = require('https');
+    const fs = require('fs');
+    server = https.createServer({
+        key: fs.readFileSync(config.get('ssl.key')),
+        cert: fs.readFileSync(config.get('ssl.cert'))
+    }, app);
+} else {
+    // HTTP
+    const http = require('http');
+    server = http.createServer(app);
+}
 
 /**
  * Listen on provided port, on all network interfaces.

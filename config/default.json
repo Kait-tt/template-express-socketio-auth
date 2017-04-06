@@ -10,5 +10,10 @@
   "session": {
     "name": "name",
     "secret": "secret"
+  },
+  "ssl": {
+    "enabled": false,
+    "key": "",
+    "cert": ""
   }
 }

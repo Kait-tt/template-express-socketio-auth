@@ -15,8 +15,21 @@ mysql -uroot -p -e 'create database template_express_socketio_auth;'
 ```
 
 ## Usage
+### Start the server
 ```
 npm start
+```
+
+### Enable ssl
+```
+cp config/default.json config/development.json
+# Change ssl.enabled to true, and set ssl.key and ssl.cert.
+# e.g.,
+# "ssl": {
+#   "enabled": true,
+#   "key": "c:/XAMPP/apache/conf/ssl.key/server.key",
+#   "cert": "c:/XAMPP/apache/conf/ssl.crt/server.crt"
+# }
 ```
 
 ## 構成
