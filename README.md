@@ -3,6 +3,7 @@ Express+Socket.IO+認証システムのテンプレート
 
 ## Requirements
 - Node v7.x
+- MySQL
 
 ## Install
 ```
